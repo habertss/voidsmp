@@ -1,0 +1,133 @@
+# ============================================================
+#  SMPSkills - Configuration
+# ============================================================
+
+# Niveau maximum pour toutes les compétences
+max-level: 100
+
+# Formule d'XP nécessaire pour passer du niveau N au N+1 :
+#   xp = base + (N * N * multiplier)
+xp-formula:
+  base: 100
+  multiplier: 8
+
+# Multiplicateur d'XP global (ex: 2.0 pour un weekend double XP)
+xp-multiplier: 1.0
+
+# Les bonus de dégâts s'appliquent-ils aussi en PvP ?
+pvp-bonus: false
+
+# XP de combat multipliée par ce facteur pour les mobs de spawner (anti-farm)
+spawner-xp-multiplier: 0.25
+
+# Afficher la progression d'XP dans l'action bar
+action-bar: true
+
+# Sons et feux d'artifice au level up
+level-up-effects: true
+
+# Messages
+messages:
+  prefix: "&8[&6Skills&8] &7"
+  level-up: "&a&l+ NIVEAU ! &7{skill} &e{level}"
+  no-permission: "&cTu n'as pas la permission."
+  unknown-skill: "&cCompétence inconnue."
+
+# XP gagnée par action
+xp:
+  mining:
+    # Matériau: XP
+    STONE: 1
+    DEEPSLATE: 1.5
+    COAL_ORE: 6
+    DEEPSLATE_COAL_ORE: 7
+    COPPER_ORE: 5
+    DEEPSLATE_COPPER_ORE: 6
+    IRON_ORE: 8
+    DEEPSLATE_IRON_ORE: 10
+    GOLD_ORE: 12
+    DEEPSLATE_GOLD_ORE: 14
+    NETHER_GOLD_ORE: 8
+    REDSTONE_ORE: 8
+    DEEPSLATE_REDSTONE_ORE: 10
+    LAPIS_ORE: 10
+    DEEPSLATE_LAPIS_ORE: 12
+    DIAMOND_ORE: 30
+    DEEPSLATE_DIAMOND_ORE: 40
+    EMERALD_ORE: 35
+    DEEPSLATE_EMERALD_ORE: 45
+    NETHER_QUARTZ_ORE: 6
+    ANCIENT_DEBRIS: 80
+    NETHERRACK: 0.5
+    OBSIDIAN: 15
+  woodcutting:
+    OAK_LOG: 4
+    SPRUCE_LOG: 4
+    BIRCH_LOG: 4
+    JUNGLE_LOG: 5
+    ACACIA_LOG: 4
+    DARK_OAK_LOG: 5
+    MANGROVE_LOG: 5
+    CHERRY_LOG: 5
+    CRIMSON_STEM: 5
+    WARPED_STEM: 5
+  farming:
+    WHEAT: 4
+    CARROTS: 4
+    POTATOES: 4
+    BEETROOTS: 5
+    NETHER_WART: 6
+    MELON: 5
+    PUMPKIN: 5
+    SUGAR_CANE: 3
+    COCOA: 5
+    SWEET_BERRY_BUSH: 3
+  combat:
+    # Par défaut pour les monstres hostiles, sinon XP selon type
+    default: 8
+    ZOMBIE: 8
+    SKELETON: 9
+    SPIDER: 8
+    CREEPER: 12
+    ENDERMAN: 18
+    WITCH: 15
+    BLAZE: 20
+    WITHER_SKELETON: 25
+    PIGLIN_BRUTE: 30
+    GHAST: 25
+    ELDER_GUARDIAN: 120
+    WARDEN: 400
+    WITHER: 500
+    ENDER_DRAGON: 800
+  fishing:
+    default: 10
+    treasure: 40
+
+# Bonus par niveau (valeurs par niveau de compétence)
+perks:
+  mining:
+    # Chance (en %) de drop double = niveau * valeur
+    double-drop-per-level: 0.4
+    # Niveau requis pour avoir Haste I / II
+    haste-1-level: 25
+    haste-2-level: 60
+  woodcutting:
+    double-drop-per-level: 0.4
+    # Niveau requis pour Célérité I quand on tient une hache
+    haste-level: 30
+  farming:
+    double-drop-per-level: 0.5
+    # Niveau pour replanter automatiquement
+    auto-replant-level: 15
+  combat:
+    # % de dégâts bonus par niveau
+    damage-per-level: 0.4
+    # Niveau pour Résistance passive (Résistance I)
+    resistance-level: 50
+    # Bonus de cœurs max (1 cœur tous les X niveaux)
+    heart-every-levels: 20
+  fishing:
+    # Réduction du temps d'attente (% par niveau)
+    speed-per-level: 0.6
+    # Chance (%) de loot trésor par niveau
+    treasure-per-level: 0.3

@@ -1,0 +1,20 @@
+name: SMPSkills
+version: ${project.version}
+main: fr.smpskills.SMPSkills
+api-version: '1.21'
+description: Système de compétences (skills) pour serveur SMP
+authors: [SMP]
+
+commands:
+  skills:
+    description: Ouvre le menu des compétences
+    aliases: [competences, skill, comp]
+    usage: /skills [top <skill>|info <skill>|admin ...]
+
+permissions:
+  smpskills.use:
+    description: Utiliser /skills
+    default: true
+  smpskills.admin:
+    description: Commandes admin
+    default: op
